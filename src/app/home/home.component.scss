@@ -1,0 +1,41 @@
+.wrapper {
+  .container {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    .content_view {
+      padding-top: 30px;
+      padding-left: 15px;
+      .image_size {
+        img {
+          width: 100%;
+        }
+      }
+      .header_custom {
+        background-color: #825638;
+        color: white;
+        padding-left: 10px;
+      }
+      ._1 {
+        background-color: #524248;
+      }
+      ._2 {
+        background-color: #3a713a;
+      }
+      ._3 {
+        background-color: #484f7b;
+      }
+      i {
+        position: absolute;
+        right: 20px;
+        top: 2px;
+        color: white;
+      }
+    }
+    p {
+      text-align: justify;
+    }
+    .section_two {
+      margin-top: 30px;
+    }
+  }
+}

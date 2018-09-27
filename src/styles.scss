@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  src: url("../src/assets/fonts/YanoneKaffeesatz-Bold.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  src: url("../src/assets/fonts/YanoneKaffeesatz-Light.ttf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  src: url("../src/assets/fonts/YanoneKaffeesatz-Regular.ttf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body,
+html {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+.wrapper {
+  .container {
+    border-left: 1px solid;
+    border-right: 1px solid;
+  }
+}
