@@ -8,6 +8,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { SkillsComponent } from './skills/skills.component';
+import { MapComponent } from './map/map.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,15 @@ import { SkillsComponent } from './skills/skills.component';
     FooterComponent,
     ExperienceComponent,
     HomeComponent,
-    SkillsComponent
+    SkillsComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD1GdqOzdCaEkB-bMOs7QroSmPmoChL-rk'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
