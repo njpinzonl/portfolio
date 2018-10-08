@@ -29,7 +29,7 @@ import { ModalComponent } from './modal/modal.component';
     AppRoutingModule,
     ModalModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD1GdqOzdCaEkB-bMOs7QroSmPmoChL-rk'
+      apiKey: ''
     })
   ],
   providers: [BsModalRef],
