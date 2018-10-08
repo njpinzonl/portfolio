@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Marker } from '../models/marker.interface';
 
 @Component({
   selector: 'app-map',
@@ -10,13 +11,16 @@ export class MapComponent implements OnInit {
   @Input() lat: number;
   @Input() lng: number;
   @Input() zoom: number;
+  @Input() markers: Marker[] = [];
+  @Output() marker = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
-    this.lat = -34.600861;
-    this.lng = -58.368913;
-    this.zoom = 18;
+
   }
 
+  clickedMarker(label: string, index: number) {
+    this.marker.emit(index);
+  }
 }

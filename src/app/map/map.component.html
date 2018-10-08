@@ -1,5 +1,15 @@
 <div class="border_map">
   <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    <agm-marker *ngFor="let m of markers; let i = index"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [label]="m.label"
+      [markerDraggable]="m.draggable"
+      (markerClick)="clickedMarker(m.label, i)">
+
+      <!-- <agm-info-window>
+          <strong>{{i}}</strong>
+      </agm-info-window> -->
+    </agm-marker>
   </agm-map>
 </div>

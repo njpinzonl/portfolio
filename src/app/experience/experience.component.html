@@ -1,10 +1,25 @@
 <div class="wrapper">
   <div class="container">
-    <app-map>
-
-    </app-map>
+    <h1>Lorem ipsum</h1>
     <p>
-      experience works!
+      click on the markers
     </p>
+    <div class="container_map">
+      <app-map [lat]='lat' [lng]='lng' [zoom]='zoom' [markers]='markers' (marker)='showModal($event, template)'>
+      </app-map>
+    </div>
   </div>
 </div>
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{title}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>
+      {{description}}
+    </p>
+  </div>
+</ng-template>
