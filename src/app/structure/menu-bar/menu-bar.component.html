@@ -11,19 +11,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" [routerLink]="['/home']"><span class="sr-only" >(current)</span>
+        <a class="nav-item nav-link" [routerLink]="['/home']" [ngClass]="[current_route == '/home' ? 'active': '']">
           <i class="material-icons">
             home
           </i>
           Inicio
         </a>
-        <a class="nav-item nav-link" [routerLink]="['/experience']">
+        <a class="nav-item nav-link" [routerLink]="['/experience']"  [ngClass]="[current_route == '/experience' ? 'active': '']">
           <i class="material-icons">
             web
           </i>
           Lorem
         </a>
-        <a class="nav-item nav-link" [routerLink]="['/skills']">
+        <a class="nav-item nav-link" [routerLink]="['/skills']"  [ngClass]="[current_route == '/skills' ? 'active': '']">
           <i class="material-icons">
             stars
           </i>

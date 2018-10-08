@@ -32,7 +32,8 @@
     "ngx-bootstrap": "^3.0.1",
     "path": "^0.12.7",
     "poper": "^0.1.1",
-    "rxjs": "~6.2.0",
+    "rxjs": "^6.2.2",
+    "rxjs-compat": "^6.3.3",
     "typescript": "~2.9.2",
     "zone.js": "~0.8.26"
   },
