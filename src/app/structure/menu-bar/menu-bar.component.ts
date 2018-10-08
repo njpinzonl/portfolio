@@ -8,11 +8,7 @@ import 'rxjs/add/operator/filter';
   styleUrls: ['./menu-bar.component.scss']
 })
 export class MenuBarComponent implements OnInit {
-  active_home: boolean;
-  active_exp: boolean;
-  active_skill: boolean;
   current_route: string;
-
 
   constructor(private router: Router) {
     router.events
@@ -24,20 +20,8 @@ export class MenuBarComponent implements OnInit {
 
   ngOnInit() {
   }
-  // isActive(param) {
-  //   if (param === 'home') {
-  //     this.active_home = true;
-  //     this.active_exp = false;
-  //     this.active_skill = false;
-  //   } else if (param === 'exp') {
-  //     this.active_home = false;
-  //     this.active_exp = true;
-  //     this.active_skill = false;
-  //   } else if (param === 'skill') {
-  //     this.active_home = false;
-  //     this.active_exp = false;
-  //     this.active_skill = true;
-  //   }
-  // }
 
+  toggle() {
+    document.getElementById('navbarNavAltMarkup').classList.remove('show');
+  }
 }

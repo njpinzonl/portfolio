@@ -1,8 +1,11 @@
-
 .bgBlack {
-    width: 100%;
-    .container{
-        padding: 0;
-        height: 46px;
+  width: 100%;
+  .container {
+    padding: 0;
+    height: 46px;
+    .custom {
+      color: white;
+      text-align: center;
     }
+  }
 }

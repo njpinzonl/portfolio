@@ -5,25 +5,25 @@
         fingerprint
       </i>
     </span>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="btn-mb-tooglemenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" [routerLink]="['/home']" [ngClass]="[current_route == '/home' ? 'active': '']">
+        <a class="nav-item nav-link" [routerLink]="['/home']" [ngClass]="[current_route == '/home' ? 'active': '']" (click)="toggle()">
           <i class="material-icons">
             home
           </i>
           Inicio
         </a>
-        <a class="nav-item nav-link" [routerLink]="['/experience']"  [ngClass]="[current_route == '/experience' ? 'active': '']">
+        <a class="nav-item nav-link" [routerLink]="['/experience']" [ngClass]="[current_route == '/experience' ? 'active': '']" (click)="toggle()">
           <i class="material-icons">
             web
           </i>
           Lorem
         </a>
-        <a class="nav-item nav-link" [routerLink]="['/skills']"  [ngClass]="[current_route == '/skills' ? 'active': '']">
+        <a class="nav-item nav-link" [routerLink]="['/skills']" [ngClass]="[current_route == '/skills' ? 'active': '']" (click)="toggle()">
           <i class="material-icons">
             stars
           </i>

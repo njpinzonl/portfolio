@@ -1,7 +1,16 @@
-i {
-  vertical-align: sub;
-}
-.custom_avatar {
-  width: 30px;
-  height: 30px;
+.bg-dark {
+  i {
+    vertical-align: sub;
+  }
+  .custom_avatar {
+    width: 30px;
+    height: 30px;
+  }
+  span.navbar-text {
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      top: 5px;
+      left: 80px;
+    }
+  }
 }

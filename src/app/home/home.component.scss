@@ -1,9 +1,15 @@
 .content_view {
-  padding-top: 30px;
-  padding-left: 15px;
+  padding-top: 15px;
+  @media screen and (min-width: 768px) {
+    padding-top: 30px;
+    padding-left: 15px;
+  }
   .image_size {
     img {
       width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
     }
   }
   .header_custom {
@@ -31,5 +37,7 @@ p {
   text-align: justify;
 }
 .section_two {
-  margin-top: 30px;
+  @media screen and (min-width: 991px) {
+    margin-top: 30px;
+  }
 }
