@@ -1,0 +1,31 @@
+.container {
+  p {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+  }
+  .margin {
+    @media screen and (max-width: 767px) {
+      margin-top: 15px;
+    }
+  }
+  .section_two {
+    padding-bottom: 20px;
+    .custom_color {
+      background-color: purple;
+    }
+    .custom_color_sql {
+      background-color: gray;
+    }
+    .custom_color_ht {
+      background-color: orange;
+    }
+    .custom_color_bt {
+      background-color: #563d7c;
+    }
+    .custom_color_git {
+      background-color: #f14e32;
+    }
+  }
+}

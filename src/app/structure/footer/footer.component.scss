@@ -1,9 +1,13 @@
-.bgBlack {
-  width: 100%;
+.bg-dark {
   .container {
     padding: 0;
     @media screen and (max-width: 425px) {
       font-size: 10px;
+    }
+    .display {
+      @media screen and (min-width: 767px) {
+        display: inline-flex;
+      }
     }
     .custom {
       color: white;
