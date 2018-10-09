@@ -14,6 +14,8 @@ export class ExperienceComponent implements OnInit {
   zoom = 11;
   title = '';
   description: any;
+  duration: any;
+  position: any;
   template: TemplateRef<any>;
   modalRef: BsModalRef;
   constructor(private modalService: BsModalService) { }
@@ -38,11 +40,16 @@ export class ExperienceComponent implements OnInit {
   showModal(ev, templates) {
     this.modalRef = this.modalService.show(templates, { backdrop: 'static', keyboard: false });
     if (ev === 0) {
-      this.title = 'title 0';
-      this.description = 'description 0, Lorem ipsum dolor sit amet consectetur adipiscing elit eget class, feugiat eleifend ad felis tellus hac neque nam, lobortis commodo vulputate accumsan at vel mauris primis. Pellentesque nunc nisi netus himenaeos massa magnis augue, quis cursus elementum phasellus feugiat habitant torquent, semper parturient viverra neque ornare porta. Ornare cras leo gravida condimentum mattis proin et euismod duis sociis tempor, himenaeos nascetur morbi metus odio inceptos velit fames nostra eu';
+      this.title = 'Stefanini Colombia';
+      this.duration = 'Abril 2018 - Actualidad';
+      this.position = 'Desarrollador Angular';
+      this.description = 'Desarrollo del portal web de enfocado al reporte, revisión y declaracion de siniestros para la compañía de seguros Cardif, utilizando Angular 4+, Bootstrap (para el diseño responsive), HTML 5 y CSS3, haciendo uso de la herramienta Git para el versionamiento de código. Dentro del proyecto se hizo uso de la metodología de desarrollo SCRUM para la gestión del proyecto.';
     } else if (ev === 1) {
-      this.title = 'title 1';
-      this.description = 'description 0, Lorem ipsum dolor sit amet consectetur adipiscing elit eget class, feugiat eleifend ad felis tellus hac neque nam, lobortis commodo vulputate accumsan at vel mauris primis. Pellentesque nunc nisi netus himenaeos massa magnis augue, quis cursus elementum phasellus feugiat habitant torquent, semper parturient viverra neque ornare porta. Ornare cras leo gravida condimentum mattis proin et euismod duis sociis tempor, himenaeos nascetur morbi metus odio inceptos velit fames nostra eu';
+      this.title = 'Exsis Sorftware y Soluciones SAS';
+      this.duration = 'Febrero 2015 – Abril 2018';
+      this.position = 'Ingeniero Junior';
+      this.description = 'Dentro de la empresa me desempeñé como desarrollador web front-end y tester en diferentes proyectos. Fui encargado del diseño de casos de uso, especificación de requerimientos y casos de prueba haciendo uso de Enterprise Architect de un proyecto interno. En los diferentes proyectos se hizo uso Javascript, CSS3 y HTML5, Angular JS 1.6 y JQuery, Adicionalmente, realicé soporte para inversiones comerciales San German donde desempeñe funciones para generación de reportes. Dentro de los proyectos se utilizó la metodología de desarrollo SCRUM.';
     }
   }
 }
+

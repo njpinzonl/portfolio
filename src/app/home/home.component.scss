@@ -35,6 +35,9 @@
 }
 p {
   text-align: justify;
+  @media screen and (min-width: 991px) {
+    margin-bottom: 0px;
+  }
 }
 .section_two {
   @media screen and (min-width: 991px) {
