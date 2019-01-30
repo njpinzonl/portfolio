@@ -1,0 +1,40 @@
+table {
+  margin: auto;
+  tr,
+  td {
+    img {
+      height: 100px;
+      width: 100px;
+      margin: 5px;
+      border: 1px solid darkolivegreen;
+      padding: 10px;
+    }
+  }
+  td:hover {
+    box-shadow: 0px 0px 10px 5px darkolivegreen;
+  }
+}
+.margin_table {
+  margin-bottom: 20px;
+}
+.backgroundTimer {
+  position: absolute;
+  right: 300px;
+  margin-top: 5px;
+  .timer {
+    border-radius: 50%;
+    border: 2px solid  #cc3300;
+    width: 130px;
+    height: 130px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: red;
+    background-color: black;
+    span {
+      position: absolute;
+      top: 60px;
+      left: 50px;
+      font-size: 20px;
+    }
+  }
+}

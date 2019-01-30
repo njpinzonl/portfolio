@@ -32,6 +32,13 @@
           </i>
           Habilidades
         </a>
+        <a class="nav-item nav-link" [routerLink]="['/game']" [ngClass]="[current_route == '/game' ? 'active': '']"
+          (click)="toggle()">
+          <i class="material-icons">
+            gamepad
+          </i>
+          Juego
+        </a>
       </div>
     </div>
 

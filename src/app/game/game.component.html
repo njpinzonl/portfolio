@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Juego de memoria</h1>
+        <p>
+          Seleccione las imágenes que tienen pareja, antes que se agote el
+          tiempo.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="backgroundTimer">
+        <div class="timer"><span>00:05</span></div>
+      </div>
+      <table class="margin_table">
+        <tr *ngFor="let row of table; trackBy: trackRow; let i = index">
+          <td *ngFor="let image of row; trackBy: trackImage; let j = index">
+            <a (click)="turnImage(image, i * row.length + j)"
+              ><img
+                id="{{ (i * row.length) + j }}"
+                src="/src/assets/img/memory.png"
+                draggable="false"
+                alt=""
+            /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="row pb-3">
+      <div class="col-sm-12 text-center">
+        <button (click)="reloadGame()" type="button" class="btn btn-success">
+          Jugar de nuevo
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

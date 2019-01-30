@@ -12,6 +12,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { ModalComponent } from './modal/modal.component';
+import { GameComponent } from './game/game.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { ModalComponent } from './modal/modal.component';
     HomeComponent,
     SkillsComponent,
     MapComponent,
-    ModalComponent
+    ModalComponent,
+    GameComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ModalModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: ''
