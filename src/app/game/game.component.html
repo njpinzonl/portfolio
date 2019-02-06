@@ -1,36 +1,36 @@
 <div class="wrapper">
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h1>Juego de memoria</h1>
+      <div class="col-sm-12 col-md-4 firstBox">
+        <app-timer [startCount]="started"></app-timer>        
+        <h4>Juego de memoria</h4>
         <p>
-          Seleccione las imágenes que tienen pareja, antes que se agote el
-          tiempo.
+          Encuentra todas las parejas, en el menor tiempo posible.
         </p>
       </div>
-    </div>
-    <div class="row">
-      <div class="backgroundTimer">
-        <div class="timer"><span>00:05</span></div>
+      <div class="col-sm-12 col-md-4">
+        <table id='table' class="margin_table">
+          <tr *ngFor="let row of table; trackBy: trackRow; let i = index">
+            <td *ngFor="let image of row; trackBy: trackImage; let j = index">
+              <a (click)="turnImage(image, i * row.length + j, $event)"><img id="{{ (i * row.length) + j }}" src="/src/assets/img/memory.png"
+                 draggable="false" alt="" [ngClass]="{'customImage': image.clicked}"/></a>
+            </td>
+          </tr>
+        </table>
       </div>
-      <table class="margin_table">
-        <tr *ngFor="let row of table; trackBy: trackRow; let i = index">
-          <td *ngFor="let image of row; trackBy: trackImage; let j = index">
-            <a (click)="turnImage(image, i * row.length + j)"
-              ><img
-                id="{{ (i * row.length) + j }}"
-                src="/src/assets/img/memory.png"
-                draggable="false"
-                alt=""
-            /></a>
-          </td>
-        </tr>
-      </table>
+      <div class="col-sm-12 col-md-4 scores">
+        <div *ngIf="showScores">
+          <h5><b>¡Felicidades!</b>, aquí están tus mejores tiempos:</h5>
+          <ol>
+            <li *ngFor="let item of arrayValues;">{{item}}</li>
+          </ol>  
+        </div>
+      </div>
     </div>
     <div class="row pb-3">
       <div class="col-sm-12 text-center">
         <button (click)="reloadGame()" type="button" class="btn btn-success">
-          Jugar de nuevo
+          {{play ? 'Jugar de nuevo' : 'Jugar'}}
         </button>
       </div>
     </div>

@@ -14,6 +14,7 @@ import { AgmCoreModule } from '@agm/core';
 import { ModalComponent } from './modal/modal.component';
 import { GameComponent } from './game/game.component';
 import { FormsModule } from '@angular/forms';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     SkillsComponent,
     MapComponent,
     ModalComponent,
-    GameComponent
+    GameComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,

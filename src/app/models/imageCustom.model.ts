@@ -3,4 +3,5 @@ export class CustomImage {
   name: string;
   src: string;
   selected: boolean;
+  clicked: boolean;
 }

@@ -1,0 +1,13 @@
+  .double-border {
+    display: block;
+    background: #1d2124;
+    border: 3px solid #a4b7a8;
+    outline: 5px solid #1d2124;
+    width: 80%;
+    color: #328632;
+    font-weight: bold;
+    margin-top: 12px;
+    span {
+      font-size: 30px;
+    }
+  }
