@@ -1,49 +1,78 @@
-
-.container{
-  padding-top: 30px;  
-  .firstBox{
-    text-align: -webkit-center;
-   h4{ 
-    margin-top: 40px;
-   }
-  }
-  table {
-    margin: auto;
-    tr,
-    td {
-      img {
-        height: 100px;
-        width: 100px;
-        margin: 5px;
-        border: 1px solid darkolivegreen;
-        padding: 10px;
-        background-color: #b2b9c4;
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(189,185,189,1);
-        -moz-box-shadow: 10px 10px 5px 0px rgba(189,185,189,1);
-        box-shadow: 10px 10px 5px 0px rgba(189,185,189,1);
-        border-top: 4px solid #bec6c7;
-        border-right: 4px solid #838c8d;
-        border-bottom: 4px solid #838c8d;
-        border-left: 4px solid #bec6c7;
-        @media screen and (max-width: 425px){
-          height: 60px;
-          width: 60px;
+.wrapper {
+  min-height: 631px;
+  .container {
+    padding-top: 50px;
+    @media screen and (max-width: 425px){
+      padding-top: 10px;
+    }  
+    .firstBox {
+      text-align: -webkit-center;
+     h4{ 
+      margin-top: 40px;
+      @media screen and (max-width: 425px){      
+        margin-top: 15px;
+      }
+      p {
+        @media screen and (max-width: 425px){  
+          margin-bottom: 5px;
+        }
+      } 
+     }
+    }
+    table {
+      margin: auto;
+      tr,
+      td {
+        img {
+          height: 100px;
+          width: 100px;
+          margin: 5px;
+          border: 1px solid darkolivegreen;
+          padding: 10px;
+          background-color: #b2b9c4;
+          -webkit-box-shadow: 10px 10px 5px 0px rgba(189,185,189,1);
+          -moz-box-shadow: 10px 10px 5px 0px rgba(189,185,189,1);
+          box-shadow: 10px 10px 5px 0px rgba(189,185,189,1);
+          border-top: 4px solid #bec6c7;
+          border-right: 4px solid #838c8d;
+          border-bottom: 4px solid #838c8d;
+          border-left: 4px solid #bec6c7;
+          @media screen and (max-width: 1024px){
+            height: 70px;
+            width: 70px;
+          }
+          @media screen and (max-width: 425px){
+            height: 60px;
+            width: 60px;
+          }
         }
       }
+    } 
+    .customImage {
+        background-color: transparent !important;
     }
-  } 
-  .customImage {
-      background-color: transparent !important;
-  }
-  .margin_table {
-    margin-bottom: 20px;
-  }
-  .scores {
-    font-weight: bold;
-    ol {
-      padding-left: 25px;
-      font-size: 23px;
-      color: #2d9259;
+    .margin_table {
+      margin-bottom: 20px;
+    }
+    .scores {
+      font-weight: bold;
+      @media screen and (max-width: 767px){
+        text-align: center;
+      }
+      ol {
+        padding-left: 25px;
+        font-size: 23px;
+        color: #2d9259;
+        @media screen and (max-width: 767px){
+          font-size: 20px;
+          list-style-position: inside;
+        }
+      }
+      div{
+        @media screen and (max-width: 425px){
+          padding-left: 10px;
+        }
+      }
     }
   }
 }

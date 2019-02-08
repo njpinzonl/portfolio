@@ -1,14 +1,14 @@
 <div class="wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-4 firstBox">
+      <div class="col-sm-12 col-md-3 firstBox">
         <app-timer [startCount]="started"></app-timer>        
         <h4>Juego de memoria</h4>
         <p>
           Encuentra todas las parejas, en el menor tiempo posible.
         </p>
       </div>
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-12 col-md-6">
         <table id='table' class="margin_table">
           <tr *ngFor="let row of table; trackBy: trackRow; let i = index">
             <td *ngFor="let image of row; trackBy: trackImage; let j = index">
@@ -18,7 +18,7 @@
           </tr>
         </table>
       </div>
-      <div class="col-sm-12 col-md-4 scores">
+      <div class="col-sm-12 col-md-3 scores">
         <div *ngIf="showScores">
           <h5><b>¡Felicidades!</b>, aquí están tus mejores tiempos:</h5>
           <ol>

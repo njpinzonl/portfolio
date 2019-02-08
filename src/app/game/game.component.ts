@@ -131,11 +131,10 @@ export class GameComponent implements OnInit {
   reloadGame() {
     this.play = true;
     this.playing.emit(this.play);
-    const element = document.getElementById('table');
-    element.classList.add('hover_table');
     for (let i = 0; i < 16; i++) {
       const restart = document.getElementById(i.toString()).setAttribute('src', '/src/assets/img/memory.png');
       this.imgList[i].selected = false;
+      this.imgList[i].clicked = false;
     }
     this.startGame();
   }

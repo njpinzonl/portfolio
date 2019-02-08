@@ -7,6 +7,12 @@
     color: #328632;
     font-weight: bold;
     margin-top: 12px;
+    @media screen and (min-width: 768px) and (max-width: 1024px) {   
+      width: 100%;
+    }
+    @media screen and (min-width: 375px) and (max-width: 767px) {   
+      width: 50%;
+    }
     span {
       font-size: 30px;
     }
