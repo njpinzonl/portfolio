@@ -89,8 +89,8 @@ export class GameComponent implements OnInit {
               if (this.move1Id !== '' && this.move2Id !== '') {
               this.imgList[this.move1Id].clicked = false;
               this.imgList[this.move2Id].clicked = false;
-                const element = document.getElementById(this.move1Id).setAttribute('src', '/src/assets/img/memory.png');
-                const element2 = document.getElementById(this.move2Id).setAttribute('src', '/src/assets/img/memory.png');
+                const element = document.getElementById(this.move1Id).setAttribute('src', '/../src/assets/img/memory.png');
+                const element2 = document.getElementById(this.move2Id).setAttribute('src', '/../src/assets/img/memory.png');
                 this.resetValues();
               }
             }, 300);
@@ -132,7 +132,7 @@ export class GameComponent implements OnInit {
     this.play = true;
     this.playing.emit(this.play);
     for (let i = 0; i < 16; i++) {
-      const restart = document.getElementById(i.toString()).setAttribute('src', '/src/assets/img/memory.png');
+      const restart = document.getElementById(i.toString()).setAttribute('src', '/../src/assets/img/memory.png');
       this.imgList[i].selected = false;
       this.imgList[i].clicked = false;
     }
