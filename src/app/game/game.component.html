@@ -12,7 +12,7 @@
         <table id='table' class="margin_table">
           <tr *ngFor="let row of table; trackBy: trackRow; let i = index">
             <td *ngFor="let image of row; trackBy: trackImage; let j = index">
-              <a (click)="turnImage(image, i * row.length + j, $event)"><img id="{{ (i * row.length) + j }}" src="/../assets/img/memory.png"
+              <a (click)="turnImage(image, i * row.length + j)"><img id="{{ (i * row.length) + j }}" src="/../assets/img/memory.png"
                  draggable="false" alt="" [ngClass]="{'customImage': image.clicked}"/></a>
             </td>
           </tr>
