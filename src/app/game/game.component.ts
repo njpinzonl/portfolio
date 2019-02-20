@@ -97,8 +97,8 @@ export class GameComponent implements OnInit {
         } else if (this.move2.length === 0 && this.move1 !== image) {
           this.move2 = image;
           this.move2Id = tableId;
-          this.imgList[this.move2Id].clicked = true;
           const element = document.getElementById(this.move2Id).setAttribute('src', this.move2['src']);
+          this.imgList[this.move2Id].clicked = true;
         }
         if (this.move1['id'] && this.move2['id']) {
           if (this.move1['id'] === this.move2['id'] && this.move1Id !== this.move2Id) {
@@ -110,10 +110,10 @@ export class GameComponent implements OnInit {
           } else {
             setTimeout(() => {
               if (this.move1Id !== '' && this.move2Id !== '') {
-                const element = document.getElementById(this.move1Id).setAttribute('src', '/../assets/img/memory.png');
-                const element2 = document.getElementById(this.move2Id).setAttribute('src', '/../assets/img/memory.png');
                 this.imgList[this.move1Id].clicked = false;
                 this.imgList[this.move2Id].clicked = false;
+                const element = document.getElementById(this.move1Id).setAttribute('src', '/../assets/img/memory.png');
+                const element2 = document.getElementById(this.move2Id).setAttribute('src', '/../assets/img/memory.png');
                 this.resetValues();
               }
             }, 300);
@@ -136,7 +136,8 @@ export class GameComponent implements OnInit {
       }
     });
     if (count === 16) {
-      this.playing.emit(false);
+      this.play = false;
+      this.playing.emit(this.play);
       const values = sessionStorage.getItem('Score');
       const arrayValuesFormat = [];
       this.arrayValues = values ? values.split(',') : [];
