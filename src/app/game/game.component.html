@@ -2,18 +2,38 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-3 firstBox">
-        <app-timer [startCount]="started"></app-timer>        
+        <app-timer [startCount]="started"></app-timer>
         <h4>Juego de memoria</h4>
         <p>
           Encuentra todas las parejas, en el menor tiempo posible.
         </p>
+        <div class="row col-12 colum1">            
+            <label for=""><b><em>Elige con qué categoría deseas jugar, imágenes o números.</em></b></label>
+          <div class="col-4 div1">
+            <a (click)="slider('collage')">
+              <img id = "collage" src="/../assets/img/picture-1.svg" alt="">
+            </a>
+          </div>
+          <div class="paddingSlide col-4">
+            <label class="switch">
+              <input type="checkbox" (click)="slider('slider')" [checked] = "checked" [disabled] = "disabledCheck">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="col-4 div2">
+            <a (click)="slider('imgNumber')">
+              <img id = "imgNumber" src="/../assets/img/number-1.svg" alt="">
+            </a>
+          </div>
+        </div>
       </div>
       <div class="col-sm-12 col-md-6">
         <table id='table' class="margin_table">
           <tr *ngFor="let row of table; trackBy: trackRow; let i = index">
             <td *ngFor="let image of row; trackBy: trackImage; let j = index">
-              <a (click)="turnImage(image, i * row.length + j)"><img id="{{ (i * row.length) + j }}" src="/../assets/img/memory.png"
-                 draggable="false" alt="" [ngClass]="{'customImage': image.clicked}"/></a>
+              <a (click)="turnImage(image, i * row.length + j)"><img id="{{ (i * row.length) + j }}"
+                  src="/../assets/img/memory.png" draggable="false" alt=""
+                  [ngClass]="{'customImage': image.clicked}" /></a>
             </td>
           </tr>
         </table>
@@ -23,7 +43,7 @@
           <h5><b>¡Felicidades!</b>, aquí están tus mejores tiempos:</h5>
           <ol>
             <li *ngFor="let item of arrayValues;">{{item}}</li>
-          </ol>  
+          </ol>
         </div>
       </div>
     </div>

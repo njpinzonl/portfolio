@@ -16,11 +16,14 @@ export class GameComponent implements OnInit {
   arrayValues = [];
   showScores = false;
   play = false;
+  imgList: CustomImage[] = [];
+  checked = false;
+  disabledCheck = false;
 
   @Output() playing = new EventEmitter();
   get started() { return this.playing.asObservable(); }
 
-  private imgList: CustomImage[] = [
+  private imgListTech: CustomImage[] = [
     { id: 1, name: 'angular', src: '/../assets/img/angular.png', selected: false, clicked: false },
     { id: 2, name: 'javascript', src: '/../assets/img/javascript.jpg', selected: false, clicked: false },
     { id: 3, name: 'c#', src: '/../assets/img/cSharp.png', selected: false, clicked: false },
@@ -39,7 +42,27 @@ export class GameComponent implements OnInit {
     { id: 8, name: 'bootstrap', src: '/../assets/img/bootstrap.png', selected: false, clicked: false }
   ];
 
+  private imgListNumbers: CustomImage[] = [
+    { id: 1, name: 'diez', src: '/../assets/img/10.png', selected: false, clicked: false },
+    { id: 2, name: 'once', src: '/../assets/img/11.png', selected: false, clicked: false },
+    { id: 3, name: 'doce', src: '/../assets/img/12.png', selected: false, clicked: false },
+    { id: 4, name: 'trece', src: '/../assets/img/13.png', selected: false, clicked: false },
+    { id: 5, name: 'catorce', src: '/../assets/img/14.png', selected: false, clicked: false },
+    { id: 6, name: 'quince', src: '/../assets/img/15.png', selected: false, clicked: false },
+    { id: 7, name: 'dieciseis', src: '/../assets/img/16.png', selected: false, clicked: false },
+    { id: 8, name: 'diecisiete', src: '/../assets/img/17.png', selected: false, clicked: false },
+    { id: 1, name: 'diez', src: '/../assets/img/10.png', selected: false, clicked: false },
+    { id: 2, name: 'once', src: '/../assets/img/11.png', selected: false, clicked: false },
+    { id: 3, name: 'doce', src: '/../assets/img/12.png', selected: false, clicked: false },
+    { id: 4, name: 'trece', src: '/../assets/img/13.png', selected: false, clicked: false },
+    { id: 5, name: 'catorce', src: '/../assets/img/14.png', selected: false, clicked: false },
+    { id: 6, name: 'quince', src: '/../assets/img/15.png', selected: false, clicked: false },
+    { id: 7, name: 'dieciseis', src: '/../assets/img/16.png', selected: false, clicked: false },
+    { id: 8, name: 'diecisiete', src: '/../assets/img/17.png', selected: false, clicked: false }
+  ];
+
   ngOnInit() {
+    this.imgList = this.imgListTech;
     this.startGame();
   }
   constructor(private router: Router) { }
@@ -122,6 +145,7 @@ export class GameComponent implements OnInit {
         arrayValuesFormat.push(element);
       });
       this.arrayValues = arrayValuesFormat.slice(0, 3);
+      this.disabledCheck = false;
       this.showScores = true;
     }
   }
@@ -129,6 +153,7 @@ export class GameComponent implements OnInit {
     this.imgList.sort(function () { return Math.random() - 0.5; });
   }
   reloadGame() {
+    this.disabledCheck = true;
     this.play = true;
     this.playing.emit(this.play);
     for (let i = 0; i < 16; i++) {
@@ -137,6 +162,34 @@ export class GameComponent implements OnInit {
       this.imgList[i].clicked = false;
     }
     this.startGame();
+  }
+  slider(chosen) {
+    if (this.disabledCheck === false) {
+      if (chosen === 'collage') {
+        this.checked = false;
+      }
+      if (chosen === 'imgNumber') {
+        this.checked = true;
+      }
+      if (chosen === 'slider') {
+        this.checked = !this.checked;
+      }
+      if (this.checked) {
+        const restart = document.getElementById('imgNumber').setAttribute('src', '/../assets/img/number.svg');
+        const restart_i = document.getElementById('collage').setAttribute('src', '/../assets/img/picture.svg');
+        this.imgList = this.imgListNumbers;
+      } else {
+        const restart = document.getElementById('collage').setAttribute('src', '/../assets/img/picture-1.svg');
+        const restart_i = document.getElementById('imgNumber').setAttribute('src', '/../assets/img/number-1.svg');
+        this.imgList = this.imgListTech;
+      }
+      for (let i = 0; i < 16; i++) {
+        const restart = document.getElementById(i.toString()).setAttribute('src', '/../assets/img/memory.png');
+        this.imgList[i].selected = false;
+        this.imgList[i].clicked = false;
+      }
+      this.startGame();
+    }
   }
 }
 
