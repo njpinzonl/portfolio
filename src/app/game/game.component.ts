@@ -92,17 +92,20 @@ export class GameComponent implements OnInit {
         if (this.move1.length === 0) {
           this.move1 = image;
           this.move1Id = tableId;
-          const element = document.getElementById(this.move1Id).setAttribute('src', this.move1['src']);
+          const element = document.getElementById(this.move1Id);
+          element.setAttribute('src', this.move1['src']);
           this.imgList[this.move1Id].clicked = true;
         } else if (this.move2.length === 0 && this.move1 !== image) {
           this.move2 = image;
           this.move2Id = tableId;
-          const element = document.getElementById(this.move2Id).setAttribute('src', this.move2['src']);
+          const element = document.getElementById(this.move2Id)
+          element.setAttribute('src', this.move2['src']);
           this.imgList[this.move2Id].clicked = true;
         }
         if (this.move1['id'] && this.move2['id']) {
           if (this.move1['id'] === this.move2['id'] && this.move1Id !== this.move2Id) {
-            const element = document.getElementById(this.move2Id).setAttribute('src', this.move2['src']);
+            const element = document.getElementById(this.move2Id);
+            element.setAttribute('src', this.move2['src']);
             this.imgList[this.move1Id].selected = true;
             this.imgList[this.move2Id].selected = true;
             this.reviewCards();
@@ -112,8 +115,10 @@ export class GameComponent implements OnInit {
               if (this.move1Id !== '' && this.move2Id !== '') {
                 this.imgList[this.move1Id].clicked = false;
                 this.imgList[this.move2Id].clicked = false;
-                const element = document.getElementById(this.move1Id).setAttribute('src', '/../assets/img/memory.png');
-                const element2 = document.getElementById(this.move2Id).setAttribute('src', '/../assets/img/memory.png');
+                const element = document.getElementById(this.move1Id);
+                element.setAttribute('src', '/../assets/img/memory.png');
+                const element2 = document.getElementById(this.move2Id);
+                element2.setAttribute('src', '/../assets/img/memory.png');
                 this.resetValues();
               }
             }, 300);
@@ -158,7 +163,8 @@ export class GameComponent implements OnInit {
     this.play = true;
     this.playing.emit(this.play);
     for (let i = 0; i < 16; i++) {
-      const restart = document.getElementById(i.toString()).setAttribute('src', '/../assets/img/memory.png');
+      const restart = document.getElementById(i.toString());
+      restart.setAttribute('src', '/../assets/img/memory.png');
       this.imgList[i].selected = false;
       this.imgList[i].clicked = false;
     }
