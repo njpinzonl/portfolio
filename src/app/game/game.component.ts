@@ -121,7 +121,7 @@ export class GameComponent implements OnInit {
                 element2.setAttribute('src', '/../assets/img/memory.png');
                 this.resetValues();
               }
-            }, 200);
+            }, 300);
           }
         }
       }
