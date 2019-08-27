@@ -43,7 +43,7 @@ export class ExperienceComponent implements OnInit {
       this.title = 'Stefanini Colombia';
       this.duration = 'Abril 2018 - Actualidad';
       this.position = 'Desarrollador Angular';
-      this.description = 'Desarrollo del portal web de enfocado al reporte, revisión y declaracion de siniestros para la compañía de seguros Cardif, utilizando Angular 4+, Bootstrap (para el diseño responsive), HTML 5 y CSS3, haciendo uso de la herramienta Git para el versionamiento de código. Dentro del proyecto se hizo uso de la metodología de desarrollo SCRUM para la gestión del proyecto.';
+      this.description = 'Desarrollo del portal web enfocado al reporte, revisión y declaracion de siniestros para la compañía de seguros Cardif, utilizando Angular 4+, Bootstrap (para el diseño responsive), HTML 5 y CSS3, haciendo uso de la herramienta Git para el versionamiento de código. Dentro del proyecto se hizo uso de la metodología de desarrollo SCRUM para la gestión del proyecto.';
     } else if (ev === 1) {
       this.title = 'Exsis Sorftware y Soluciones SAS';
       this.duration = 'Febrero 2015 – Abril 2018';
